@@ -255,10 +255,9 @@ td {
 @media screen and (max-width: 760px) {
   .margin-fluc-container {
     flex-direction: column;
-    margin-left: 5%;
   }
   .card-res {
-    width: 90%;
+    width: 75%;
   }
   .ant-card {
     margin-bottom: 3% !important;
