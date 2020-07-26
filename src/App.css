@@ -84,10 +84,10 @@ body {
   white-space: nowrap;
 }
 
-tr:nth-child(odd) {
+.tr:nth-child(odd) {
   background: #f5f4f9;
 }
-tr:nth-child(even) {
+.tr:nth-child(even) {
   background: white;
 }
 .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
@@ -162,3 +162,106 @@ td {
   margin-left: 1em;
 }
 /* Recipe-List*/
+
+.details {
+  box-shadow: 10px 10px 8px lightgrey;
+  width: 40%;
+  padding: 20px;
+}
+.details:hover {
+  padding: 30px;
+}
+.details img {
+  box-shadow: 10px 10px 10px gray;
+  height: 150px;
+  width: 200px;
+}
+.imgg {
+  display: flex;
+  margin-top: 10px;
+}
+.imgg p {
+  width: 80%;
+  margin-left: 10px;
+}
+.details h5 {
+  text-align: right;
+}
+.about-h3 {
+  padding-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: medium;
+}
+.about {
+  font-family: "Times New Roman", Times, serif;
+  font-size: small;
+}
+.title:hover {
+  color: blue;
+}
+.title {
+  font-size: large;
+  font-style: oblique;
+}
+.description {
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.dec-p {
+  font-size: small;
+  font-family: "Times New Roman", Times, serif;
+  padding-left: 10px;
+}
+.hhhh {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 150px;
+  margin-top: 40px;
+}
+.button {
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.header {
+  box-shadow: 10px 10px 10px darkgrey;
+  padding: 10px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: xx-large;
+  text-transform: uppercase;
+  text-shadow: 3px 3px black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.hide-mobile {
+  display: block;
+}
+
+.ant-tabs-content-holder {
+  overflow: scroll !important;
+}
+.card-res {
+  width: 32%;
+  border-radius: 5px 5px 13px 13px;
+  box-shadow: lightgrey 0px 2px 7px;
+}
+@media screen and (max-width: 760px) {
+  .margin-fluc-container {
+    flex-direction: column;
+    margin-left: 5%;
+  }
+  .card-res {
+    width: 90%;
+    margin-left: 200px;
+  }
+  .ant-card {
+    margin-bottom: 3% !important;
+  }
+}

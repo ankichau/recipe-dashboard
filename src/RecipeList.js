@@ -33,10 +33,10 @@ export default class RecipeList extends Component {
   };
 
   componentDidMount() {
-    this.AllRecipies();
+    this.allRecipies();
   }
 
-  AllRecipies = (index) => {
+  allRecipies = (index) => {
     const { allrecipes, selectedTab } = this.state;
     if ((index && index.toString()) === selectedTab) {
       fetch(`${url}${allrecipes.next}`)
@@ -52,7 +52,7 @@ export default class RecipeList extends Component {
     }
   };
 
-  FilterUntagged = (index) => {
+  filterUntagged = (index) => {
     const { isuntagged, selectedTab } = this.state;
     if ((index && index.toString()) === selectedTab) {
       fetch(`${url}${isuntagged.next}`)
@@ -67,7 +67,7 @@ export default class RecipeList extends Component {
         );
     }
   };
-  FilterDisabled = (index) => {
+  filterDisabled = (index) => {
     const { isdisabled, selectedTab } = this.state;
     if ((index && index.toString()) === selectedTab) {
       fetch(`${url}${isdisabled.next}`)
@@ -82,7 +82,7 @@ export default class RecipeList extends Component {
         );
     }
   };
-  FilterIncorrect = (index) => {
+  filterIncorrect = (index) => {
     const { isincorrect, selectedTab } = this.state;
     if ((index && index.toString()) === selectedTab) {
       fetch(`${url}${isincorrect.next}`)
@@ -101,32 +101,32 @@ export default class RecipeList extends Component {
   getTabData = (tab, index) => {
     const { allrecipes, isuntagged, isdisabled, isincorrect } = this.state;
     const {
-      AllRecipies,
-      FilterDisabled,
-      FilterIncorrect,
-      FilterUntagged,
+      allRecipies,
+      filterDisabled,
+      filterIncorrect,
+      filterUntagged,
     } = this;
     let data, next, loadMore;
     switch (tab) {
       case "ALL RECIPES":
         data = allrecipes.data;
         next = allrecipes.next;
-        loadMore = () => AllRecipies(index);
+        loadMore = () => allRecipies(index);
         break;
       case "UNTAGGED":
         data = isuntagged.data;
         next = isuntagged.next;
-        loadMore = () => FilterUntagged(index);
+        loadMore = () => filterUntagged(index);
         break;
       case "DISABLED":
         data = isdisabled.data;
         next = isdisabled.next;
-        loadMore = () => FilterDisabled(index);
+        loadMore = () => filterDisabled(index);
         break;
       case "INCORRECT":
         data = isincorrect.data;
         next = isincorrect.next;
-        loadMore = () => FilterIncorrect(index);
+        loadMore = () => filterIncorrect(index);
         break;
       default:
         return;

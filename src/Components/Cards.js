@@ -11,11 +11,7 @@ export default class Cards extends Component {
         type="inner"
         title={title}
         bodyStyle={{ height: "80%" }}
-        style={{
-          width: "32%",
-          borderRadius: "5px 5px 13px 13px",
-          boxShadow: "lightgrey 0px 2px 7px",
-        }}
+        className="card-res"
       >
         <Row gutter={[16, 24]} className="row">
           {items.map((names, index) => {
